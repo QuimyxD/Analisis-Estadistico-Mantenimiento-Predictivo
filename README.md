@@ -44,6 +44,89 @@ FAD_Practica_01_Equipo_02/
 ├── metadatos_ruta.txt                       # Registro o configuración de rutas
 └── README.md                                # Documentación del repositorio
 ```
+---
+
+
+## Esqueleto del Proyecto (Post-Ejecución)
+
+A continuación se muestra la estructura completa del proyecto generada automáticamente al ejecutar el script principal (`main.py`):
+
+```text
+FAD_Practica_01_Equipo_02/
+├── main.py
+├── FAD_Practica_01_Equipo_02.pdf
+├── metadatos_ruta.txt
+├── Datos/
+│   └── predictive_maintenance_dataset.csv
+├── estadistica_analitica/
+│   ├── __init__.py
+│   ├── utils.py
+│   ├── graficos/
+│   │   ├── __init__.py
+│   │   └── graficos.py
+│   ├── agrupados/
+│   │   ├── __init__.py
+│   │   ├── Tablas_Agrupados.py
+│   │   ├── Tendencias_Agrupados.py
+│   │   ├── Frecuencias_Agrupados.py
+│   │   ├── Dispersion_Agrupados.py
+│   │   └── Forma_Agrupados.py
+│   └── no_agrupados/
+│       ├── __init__.py
+│       ├── tendencias.py
+│       ├── forma.py
+│       └── dispersion.py
+├── Resultados_Agrupados/
+│   ├── estadisticas_metric_5.txt
+│   ├── estadisticas_metric_6.txt
+│   ├── estadisticas_metric_9.txt
+│   ├── tabla_frecuencias_metric_5.txt
+│   ├── tabla_frecuencias_metric_6.txt
+│   └── tabla_frecuencias_metric_9.txt
+├── Resultados_No_Agrupados/
+│   ├── estadisticas_metric_5.txt
+│   ├── estadisticas_metric_6.txt
+│   └── estadisticas_metric_9.txt
+├── Resultados_Auditoria/
+│   ├── auditoria_metric_5.txt
+│   ├── auditoria_metric_6.txt
+│   ├── auditoria_metric_9.txt
+│   └── resumen_auditoria.txt
+├── Resultados_Graficos_Agrupados/
+│   ├── Histogram_metric_5.pdf
+│   ├── Histogram_metric_6.pdf
+│   ├── Histogram_metric_9.pdf
+│   └── Boxplot_Agrupado.pdf
+└── Resultados_Graficos_No_Agrupados/
+    ├── Histograma_metric_5.pdf
+    ├── Histograma_metric_6.pdf
+    ├── Histograma_metric_9.pdf
+    ├── Boxplot_No_Agrupado.pdf
+    ├── Dispersion_Metricas.pdf
+    └── Barras_Fallas.pdf
+```
+
+---
+
+## Explicación del Proceso y Resultados Generados
+
+### 1. Arquitectura Modular (`estadistica_analitica/`)
+El proyecto se organiza de manera modular para garantizar la reutilización y claridad en los cálculos:
+* **`agrupados/`**: Calcula las tablas de distribución de frecuencias, tendencia central, dispersión y forma utilizando intervalos de clase.
+* **`no_agrupados/`**: Evalúa los datos cuantitativos exactos para obtener las métricas de tendencia central, dispersión y asimetría/curtosis sin agrupar.
+* **`graficos/`**: Módulo responsable del renderizado de gráficos vectoriales utilizando librerías estándar como `matplotlib`.
+
+### 2. Flujo de Ejecución (`main.py`)
+Al ejecutar el script `main.py`, se realiza el siguiente procesamiento:
+1. **Carga y Lectura de Datos:** Lee la fuente de datos desde `Datos/predictive_maintenance_dataset.csv`.
+2. **Generación de Carpetas de Salida:** Se crean automáticamente los directorios `Resultados_Agrupados/`, `Resultados_No_Agrupados/`, `Resultados_Auditoria/`, `Resultados_Graficos_Agrupados/` y `Resultados_Graficos_No_Agrupados/`.
+3. **Cálculos y Exportación de Textos:**
+   * Archivos `.txt` en **Resultados_Agrupados/** con estadísticos descriptivos y tablas de frecuencias por métrica.
+   * Archivos `.txt` en **Resultados_No_Agrupados/** con los estadísticos calculados de forma exacta.
+   * Archivos `.txt` en **Resultados_Auditoria/** con la comparación y cálculo de errores relativos ($E_{rel}$) entre ambos enfoques.
+4. **Generación de Gráficos Vectoriales (`.pdf`):**
+   * Cada figura se ajusta con `fig.tight_layout()`, se exporta en formato vectorial `.pdf` para mantener máxima calidad gráfica y se cierra con `plt.close(fig)` para liberar memoria.
+
 
 ---
 
