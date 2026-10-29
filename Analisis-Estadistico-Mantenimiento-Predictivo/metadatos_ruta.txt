@@ -1,0 +1,7 @@
+REPORTE DE METADATOS DE ARCHIVO
+Directorio de trabajo actual: C:\Users\quime\OneDrive\Desktop\FAD 1\FAD_Practica_01_Equipo_02
+Nombre del archivo: predictive_maintenance_dataset.csv
+Extensión: .csv
+Nombre sin extensión: predictive_maintenance_dataset
+Directorio padre: C:\Users\quime\OneDrive\Desktop\FAD 1\FAD_Practica_01_Equipo_02\Datos
+Ruta construida completa: C:\Users\quime\OneDrive\Desktop\FAD 1\FAD_Practica_01_Equipo_02\Datos\predictive_maintenance_dataset.csv
