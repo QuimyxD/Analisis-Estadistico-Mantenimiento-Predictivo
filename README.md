@@ -12,7 +12,7 @@ Este repositorio contiene la implementación y desarrollo de la **Práctica 01**
 La arquitectura del proyecto está organizada modularmente para facilitar la reutilización de código y mantener una separación clara entre la obtención de datos, el procesamiento estadístico y los informes finales.
 
 ```text
-FAD_Practica_01_Equipo_02/
+Analaisis-Estadistico-Mantenimiento-predictivo/
 │
 ├── Datos/
 │   └── predictive_maintenance_dataset.csv   # Dataset principal de trabajo
@@ -52,7 +52,7 @@ FAD_Practica_01_Equipo_02/
 A continuación se muestra la estructura completa del proyecto generada automáticamente al ejecutar el script principal (`main.py`):
 
 ```text
-FAD_Practica_01_Equipo_02/
+Analaisis-Estadistico-Mantenimiento-predictivo/
 ├── main.py
 ├── FAD_Practica_01_Equipo_02.pdf
 ├── metadatos_ruta.txt
